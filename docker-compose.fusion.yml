@@ -1,0 +1,8 @@
+services:
+  fusion-cpa:
+    build:
+      context: .
+      dockerfile: Dockerfile.fusion
+    volumes:
+      - ./runs:/workspace/runs
+

@@ -1,0 +1,7 @@
+FROM python:3.11-slim
+WORKDIR /workspace
+COPY requirements-fusion.txt .
+RUN pip install --no-cache-dir -r requirements-fusion.txt
+COPY . .
+CMD ["python", "-m", "fusion_cpa.train", "--epochs", "3", "--output", "/workspace/runs/demo"]
+
